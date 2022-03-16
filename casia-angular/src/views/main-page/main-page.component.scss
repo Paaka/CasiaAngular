@@ -1,0 +1,13 @@
+.sidebar {
+  height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

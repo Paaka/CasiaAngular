@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  public showFiller : boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
