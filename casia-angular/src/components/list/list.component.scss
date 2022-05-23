@@ -1,0 +1,8 @@
+@use './../../constants/sizes.scss' as sizes;
+@use './../../constants/colors.scss' as colors;
+
+.list{
+    width: sizes.$xxl;
+    min-height: sizes.$xl;
+    background-color: colors.$priary10;
+}

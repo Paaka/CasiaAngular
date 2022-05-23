@@ -1,4 +1,7 @@
+@use '../../constants/sizes.scss' as sizes;
+
 .wrapper{
-    width: 100vw;
-    height: 95vh;
+    width: calc(100vw - sizes.$medium);
+    height:calc(100vw - sizes.$medium);
+    margin:sizes.$medium;
 }
