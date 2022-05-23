@@ -1,14 +1,37 @@
-<mat-toolbar color="primary">
+<div class="sidenav">
+  <mat-toolbar color="primary">
     <button mat-icon-button (click)="drawer.toggle()">
       <span class="material-icons">{{drawer.opened ? 'close' : 'menu'}}</span>
     </button>
     <span>Casia Angular</span>
-</mat-toolbar>
+  </mat-toolbar>
+</div>
 
-<mat-drawer-container class="sidebar" autosize>
+
+<router-outlet></router-outlet>
+
+<mat-drawer-container class="sidebar">
   <mat-drawer #drawer class="sidebar__content" mode="side">
-      <button mat-button class="sidebar__button">Test</button>
-      <button mat-button class="sidebar__button">Test</button>
-      <button mat-button class="sidebar__button">Test</button>
+    <a routerLink="/boards">
+      <button mat-button class="sidebar__button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">view_module</mat-icon>
+        Boards
+      </button>      
+    </a>
+    <a routerLink="/groups">
+      <button mat-button class="sidebar__button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
+        Groups
+      </button>      
+    </a>
+    <a routerLink="/settings">
+      <button mat-button class="sidebar__button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+        Settings
+       </button>      
+    </a>
   </mat-drawer>
 </mat-drawer-container>
+
+
+
