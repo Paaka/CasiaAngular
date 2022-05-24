@@ -1,0 +1,15 @@
+@use './../../constants/sizes.scss' as sizes;
+
+.list-item-wrapper{
+    display: flex;
+    width: 100%;
+    height: sizes.$medium;
+    background-color: white;
+    border-radius: sizes.$xs;
+    align-items: center;
+    justify-content: center;
+
+    p{
+        margin:0px
+    }
+}
