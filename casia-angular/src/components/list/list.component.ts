@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IList } from 'src/models/List/IList';
+import { IListItem } from 'src/models/List/IListItem';
 
 @Component({
   selector: 'cas-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  @Input() public list : IList;
+  
+  @Input() public listItems : IListItem[];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.list);
   }
 
 }

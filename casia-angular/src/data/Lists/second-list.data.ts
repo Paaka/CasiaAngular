@@ -6,11 +6,11 @@ export const SECOND_LIST_DATA : IList = {
     listItems:[
         {
             id:'1-1',
-            title:'Hello World!'
+            title:'Hello Mateusz!'
         },
         {
             id:'1-2',
-            title:'List Note'
+            title:'List Test'
         },
     ],
 };

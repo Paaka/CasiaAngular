@@ -1,3 +1,5 @@
 <div class="list">
-    <cas-list-item></cas-list-item>
+    <ng-container *ngFor="let listItem of listItems">
+        <cas-list-item [title]="listItem.title"></cas-list-item>
+    </ng-container>
 </div>

@@ -1,6 +1,7 @@
 <div class="wrapper">
-    <ng-container *ngFor="let lists of allLists">
-        <cas-list >
+    <ng-container *ngFor="let list of allLists">
+        <cas-list 
+            [listItems]="list.listItems">
         </cas-list>
     </ng-container>
 </div>
