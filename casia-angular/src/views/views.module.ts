@@ -3,8 +3,14 @@ import { MainPageModule } from "./main-page/main-page.module";
 import { BoardsPageModule } from "./boards-page/boards-page.module";
 import { GroupPageModule } from "./group-page/group-page.module";
 import { SettingsPageModule } from "./settings-page/settings-page.module";
-import { RouterModule } from "@angular/router";
-import { CommonModule } from "@angular/common";
+import { RouterModule, Routes } from "@angular/router";
+
+const routes : Routes = [
+  {
+      path:'',
+      loadChildren:()=> import('./main-page/main-page.module').then(m => m.MainPageModule),
+  },
+]
 
 
 @NgModule({
@@ -13,7 +19,13 @@ import { CommonModule } from "@angular/common";
     BoardsPageModule,
     GroupPageModule,
     SettingsPageModule,
-    RouterModule,
+    RouterModule.forChild(routes),
   ],
+  exports:[
+    MainPageModule,
+    BoardsPageModule,
+    GroupPageModule,
+    SettingsPageModule,
+  ]
 })
 export class ViewsModule {}

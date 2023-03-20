@@ -7,6 +7,4 @@ export const ALL_LIST_DATA : IList[] = [
     SECOND_LIST_DATA,
     FIRST_LIST_DATA,
     SECOND_LIST_DATA,
-    FIRST_LIST_DATA,
-    SECOND_LIST_DATA,
 ];

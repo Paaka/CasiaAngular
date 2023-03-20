@@ -8,6 +8,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { BoardsPageComponent } from "../boards-page/boards-page.component";
 import { GroupPageComponent } from "../group-page/group-page.component";
 import { SettingsPageComponent } from "../settings-page/settings-page.component";
+import { CommonModule } from "@angular/common";
 
 const routes : Routes = [
     {
@@ -16,23 +17,29 @@ const routes : Routes = [
         children:[
             {
                 path:'boards',
-                component:BoardsPageComponent,
+                loadChildren:()=> import('../boards-page/boards-page.module').then(m => m.BoardsPageModule),
             },
             {
                 path:'groups',
-                component:GroupPageComponent,
+                loadChildren:()=> import('../group-page/group-page.module').then(m => m.GroupPageModule),
             },
             {
                 path:'settings',
-                component:SettingsPageComponent,
+                loadChildren:()=> import('../settings-page/settings-page.module').then(m => m.SettingsPageModule),
             }
         ]
     },
+    {
+        path:'**',
+        redirectTo: '/boards', 
+        pathMatch:'full',
+    }
 ]
 
 
 @NgModule({
     imports:[
+        CommonModule,
         MatIconModule,
         MatButtonModule,
         MatToolbarModule,
