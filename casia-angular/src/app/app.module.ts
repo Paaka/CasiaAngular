@@ -10,15 +10,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [ 
   {
-    path: '**',
-    redirectTo: '/boards', 
-    pathMatch:'full',
-  },
-  {
     path:'',
     loadChildren:()=> import('../views/views.module').then(m => m.ViewsModule),
   }, 
-
 ];
 
 
@@ -28,7 +22,6 @@ const routes: Routes = [
     AppComponent
   ],
   imports: [
-    CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,

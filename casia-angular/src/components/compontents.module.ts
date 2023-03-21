@@ -1,11 +1,19 @@
 import { NgModule } from "@angular/core";
-import { ListComponent } from './list/list.component';
-import { ListItemComponent } from './list-item/list-item.component';
-import { ListButtonComponent } from './list-button/list-button.component';
+import { ListModule } from "./list/list.module";
+import { ListItemModule } from "./list-item/list-item.module";
+import { ListButtonModule } from "./list-button/list-button.module";
 
 
 @NgModule({
-    declarations:[ListComponent, ListItemComponent, ListButtonComponent],
-    exports:[ListComponent],
+    imports:[
+      ListModule,
+      ListItemModule,
+      ListButtonModule,
+    ],
+    exports:[
+      ListModule,
+      ListItemModule, 
+      ListButtonModule,
+    ],
   })
   export class ComponentsModule {}
