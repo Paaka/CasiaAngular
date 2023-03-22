@@ -19,4 +19,8 @@ export class ListComponent implements OnInit {
     console.log(this.list);
   }
 
+  public onButtonClicked(): void{
+    this.listItems.push({id:'1-x', title:'New item'})
+  }
+
 }
