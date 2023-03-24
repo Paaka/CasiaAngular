@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { IList } from 'src/models/List/IList';
 import { IListItem } from 'src/models/List/IListItem';
 
@@ -13,6 +14,8 @@ export class ListComponent implements OnInit {
   
   @Input() public listItems : IListItem[];
 
+  public control: FormControl = new FormControl('', [Validators.required]);
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +23,10 @@ export class ListComponent implements OnInit {
   }
 
   public onButtonClicked(): void{
-    this.listItems.push({id:'1-x', title:'New item'})
+    if(this.control.valid){
+      this.listItems.push({id:`1-${this.listItems.length}`, title:this.control.value});
+      this.control.setValue('');
+    }
   }
 
 }

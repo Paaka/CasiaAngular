@@ -2,5 +2,6 @@
     <ng-container *ngFor="let listItem of listItems">
         <cas-list-item [title]="listItem.title"></cas-list-item>
     </ng-container>
+    <input matInput [formControl]="control" />
     <cas-list-button (click)="onButtonClicked()">Add items</cas-list-button>
 </div>
