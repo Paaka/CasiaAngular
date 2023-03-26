@@ -8,6 +8,7 @@ import { ListComponent } from "./list.component";
 @NgModule({
     declarations:[ListComponent],
     imports:[CommonModule, ListItemModule, ListButtonModule, ReactiveFormsModule],
+
     exports:[ListComponent],
 })
 export class ListModule{}

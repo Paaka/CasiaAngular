@@ -2,11 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { IList } from 'src/models/List/IList';
 import { IListItem } from 'src/models/List/IListItem';
+import { ListService } from './services/list.service';
 
 @Component({
   selector: 'cas-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+  providers:[ListService]
 })
 export class ListComponent implements OnInit {
 
@@ -16,10 +18,11 @@ export class ListComponent implements OnInit {
 
   public control: FormControl = new FormControl('', [Validators.required]);
 
-  constructor() { }
+  constructor(private listService: ListService) { }
 
   ngOnInit(): void {
     console.log(this.list);
+    this.listService.sayHi();
   }
 
   public onButtonClicked(): void{
