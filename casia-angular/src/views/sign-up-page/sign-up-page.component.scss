@@ -1,0 +1,17 @@
+.sign-up-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #3f51b5;
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: 50%;
+        width: 20%;
+        border-radius: 16px;
+    }
+}

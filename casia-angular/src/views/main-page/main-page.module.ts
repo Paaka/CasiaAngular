@@ -5,9 +5,6 @@ import {  MatSidenavModule } from "@angular/material/sidenav";
 import {  MatIconModule } from "@angular/material/icon";
 import { MainPageComponent } from "./main-page.component";
 import { RouterModule, Routes } from "@angular/router";
-import { BoardsPageComponent } from "../boards-page/boards-page.component";
-import { GroupPageComponent } from "../group-page/group-page.component";
-import { SettingsPageComponent } from "../settings-page/settings-page.component";
 import { CommonModule } from "@angular/common";
 
 const routes : Routes = [
@@ -29,11 +26,6 @@ const routes : Routes = [
             }
         ]
     },
-    {
-        path:'**',
-        redirectTo: '/boards', 
-        pathMatch:'full',
-    }
 ]
 
 
@@ -44,7 +36,7 @@ const routes : Routes = [
         MatButtonModule,
         MatToolbarModule,
         MatSidenavModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forChild(routes),
     ],
     declarations:[MainPageComponent],
     exports:[MainPageComponent]
