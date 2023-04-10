@@ -10,8 +10,43 @@
         display: flex;
         flex-direction: column;
         background-color: white;
-        height: 50%;
-        width: 20%;
+        height: 30%;
+        width: 18%;
+        padding: 0 20px;
         border-radius: 16px;
+        justify-content: space-around;
+        animation: GoUp 1s ease-in;
+    }
+
+    &__heading{
+        color: #3f51b5;
+        margin: 0 auto;
+    }
+
+    &__alternative-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(&:last-child){
+            margin-bottom: 8px;
+        }
+    }
+
+}
+
+@keyframes GoUp{
+    0%{
+       transform: translateY(100%); 
+       opacity: 0;
+    }
+
+    80%{
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    
+    100%{
+        transform: translateY(0);
     }
 }

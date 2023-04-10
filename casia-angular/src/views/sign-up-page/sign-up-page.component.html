@@ -1,8 +1,25 @@
 <div class="sign-up-page">
     <div class="sign-up-page__form">
-        <h1>Login in</h1>
-        <input type="email" />
-        <input type="password" />
-        <button>Login in</button>
+        <h1 class="sign-up-page__heading">Login in</h1>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input
+             matInput
+             placeholder="example@gmail.com"
+             type="email"
+             >
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input
+             matInput
+             type="password">
+          </mat-form-field>
+        <button mat-button color="primary">Sign Up</button>
+        <div class="sign-up-page__alternative-form">
+            <p>or</p>
+            <app-login-button>Continue with Gmail</app-login-button>
+            <app-login-button>Continue with Facebook</app-login-button>
+        </div>
     </div>
 </div>
