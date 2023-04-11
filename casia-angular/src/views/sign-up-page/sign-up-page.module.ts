@@ -25,7 +25,7 @@ const routes: Route[] = [
         MatInputModule,
         MatFormFieldModule,
         MatButtonModule,
-        LoginButtonModule
+        LoginButtonModule,
     ],
     exports:[SignUpPageComponent],
 })

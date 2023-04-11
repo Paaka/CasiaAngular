@@ -8,6 +8,8 @@ import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 })
 export class LoginButtonComponent{
 
+    @Input() public iconSrc = 'assets/gmail.svg'
+
     public onClickHandler(): void{
         console.log('Hello');
     }
