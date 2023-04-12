@@ -13,6 +13,11 @@ const routes: Routes = [
   }, 
   {
     path:'login',
+    loadChildren:()=> import('../views/sign-in-page/sign-in-page.module').then(m => m.SignUpPageModule),
+    pathMatch:'full',
+  },
+  {
+    path:'register',
     loadChildren:()=> import('../views/sign-up-page/sign-up-page.module').then(m => m.SignUpPageModule),
     pathMatch:'full',
   }

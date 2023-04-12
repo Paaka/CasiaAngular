@@ -1,6 +1,6 @@
 <div class="sign-up-page">
     <div class="sign-up-page__form" [formGroup]="form">
-        <h1 class="sign-up-page__heading">Register</h1>
+        <h1 class="sign-up-page__heading">Login in</h1>
         <mat-form-field class="example-full-width">
             <mat-label>Email</mat-label>
             <input
@@ -27,9 +27,7 @@
             <p class="sign-up-page__alternative-form-text">or</p>
             <app-login-button iconSrc="assets/gmail.svg">Continue with Gmail</app-login-button>
             <app-login-button iconSrc="assets/facebook.svg">Continue with Facebook</app-login-button>
-            <div style="display: flex;">
-                <p>Already have an account ? Log in </p><a routerLink="/login">here</a>
-            </div>
+            <p>Don't have an account ? Create one </p><a routerLink="/register">here</a>
         </div>
     </div>
 </div>
