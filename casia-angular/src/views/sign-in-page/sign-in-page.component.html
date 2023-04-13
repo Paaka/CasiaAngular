@@ -1,13 +1,20 @@
 <div class="sign-up-page">
     <div class="sign-up-page__form" [formGroup]="form">
-        <h1 class="sign-up-page__heading">Login in</h1>
-        <mat-form-field class="example-full-width">
+        <h1
+         data-cy="header" 
+         class="sign-up-page__heading">
+         Login in
+        </h1>
+        <mat-form-field
+         class="example-full-width"
+         >
             <mat-label>Email</mat-label>
             <input
              matInput
              placeholder="example@gmail.com"
              type="email"
              formControlName="email"
+             data-cy="email_field" 
              >
         </mat-form-field>
         <mat-form-field class="example-full-width">
@@ -20,7 +27,9 @@
         <button
          mat-button color="primary"
          [disabled]="form.invalid"
-         (click)="onButtonClickedHandler()">
+         (click)="onButtonClickedHandler()"
+         data-cy="sign-up-btn" 
+         >
          Sign Up
         </button>
         <div class="sign-up-page__alternative-form">
