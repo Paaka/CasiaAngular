@@ -12,19 +12,19 @@
 
 <mat-drawer-container class="sidebar">
   <mat-drawer #drawer class="sidebar__content" mode="side">
-    <a routerLink="/boards">
+    <a routerLink="/boards" (click)="drawer.toggle()">
       <button mat-button class="sidebar__button">
         <mat-icon aria-hidden="false" aria-label="Example home icon">view_module</mat-icon>
         Boards
       </button>      
     </a>
-    <a routerLink="/groups">
+    <a routerLink="/groups" (click)="drawer.toggle()">
       <button mat-button class="sidebar__button">
         <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
         Groups
       </button>      
     </a>
-    <a routerLink="/settings">
+    <a routerLink="/settings" (click)="drawer.toggle()">
       <button mat-button class="sidebar__button">
         <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
         Settings
