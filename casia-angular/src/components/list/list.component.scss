@@ -7,6 +7,14 @@
     background-color: colors.$priary10;
     margin-left: sizes.$small;
     padding:sizes.$xs;
+
+    &__input{
+      margin-top: sizes.$small;
+
+      mat-form-field{
+        width: 100%;
+      }
+    }
 }
 
 .example-list {

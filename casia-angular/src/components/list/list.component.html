@@ -4,6 +4,15 @@
             <cas-list-item [title]="listItem.title" cdkDrag></cas-list-item>
         </ng-container>
     </div>
-    <input matInput [formControl]="control" />
+    <div class="list__input">
+        <mat-form-field appearance="fill">
+            <mat-label>Add items</mat-label>
+            <input
+                matInput
+                placeholder="e.g. eggs, ham etc."
+                [formControl]="control"
+            />
+        </mat-form-field>
+    </div>
     <cas-list-button (click)="onButtonClicked()">Add items</cas-list-button>
 </div>
