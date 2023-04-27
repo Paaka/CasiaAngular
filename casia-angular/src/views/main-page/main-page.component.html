@@ -1,37 +1,41 @@
 <div class="sidenav">
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <span class="material-icons">{{drawer.opened ? 'close' : 'menu'}}</span>
-    </button>
-    <span>Casia Angular</span>
-  </mat-toolbar>
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="drawer.toggle()">
+            <span class="material-icons">{{
+                drawer.opened ? 'close' : 'menu'
+            }}</span>
+        </button>
+        <span>Casia Angular</span>
+    </mat-toolbar>
 </div>
 
-
-<router-outlet></router-outlet>
-
 <mat-drawer-container class="sidebar">
-  <mat-drawer #drawer class="sidebar__content" mode="side">
-    <a routerLink="/boards" (click)="drawer.toggle()">
-      <button mat-button class="sidebar__button">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">view_module</mat-icon>
-        Boards
-      </button>      
-    </a>
-    <a routerLink="/groups" (click)="drawer.toggle()">
-      <button mat-button class="sidebar__button">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
-        Groups
-      </button>      
-    </a>
-    <a routerLink="/settings" (click)="drawer.toggle()">
-      <button mat-button class="sidebar__button">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
-        Settings
-       </button>      
-    </a>
-  </mat-drawer>
+    <mat-drawer #drawer class="sidebar__content" mode="side">
+        <a routerLink="/boards" (click)="drawer.toggle()">
+            <button mat-button class="sidebar__button">
+                <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >view_module</mat-icon
+                >
+                Boards
+            </button>
+        </a>
+        <a routerLink="/groups" (click)="drawer.toggle()">
+            <button mat-button class="sidebar__button">
+                <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >group</mat-icon
+                >
+                Groups
+            </button>
+        </a>
+        <a routerLink="/settings" (click)="drawer.toggle()">
+            <button mat-button class="sidebar__button">
+                <mat-icon aria-hidden="false" aria-label="Example home icon"
+                    >settings</mat-icon
+                >
+                Settings
+            </button>
+        </a>
+    </mat-drawer>
 </mat-drawer-container>
 
-
-
+<router-outlet></router-outlet>
