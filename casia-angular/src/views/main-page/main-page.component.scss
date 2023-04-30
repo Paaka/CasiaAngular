@@ -6,6 +6,10 @@
   top: 64px;
   background: none;
 
+  &--closed{
+    display: none;
+  }
+
   &__content {
     width: 100%;
     display: flex;

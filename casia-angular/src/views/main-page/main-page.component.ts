@@ -1,18 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core'
+import { MatDrawer } from '@angular/material/sidenav'
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+    selector: 'app-main-page',
+    templateUrl: './main-page.component.html',
+    styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit {
+    @ViewChild('drawer') public elRef: any
 
-  public showFiller : boolean = false;
+    public isDrawerOpen: boolean = false
 
-  constructor() { }
+    constructor() {}
 
-  ngOnInit(): void {
-    
-  }
+    ngOnInit(): void {}
 
+    public onButtonClickedHandler(): void {
+        this.elRef.toggle()
+        this.isDrawerOpen = !this.isDrawerOpen
+        console.log(this.isDrawerOpen)
+    }
 }

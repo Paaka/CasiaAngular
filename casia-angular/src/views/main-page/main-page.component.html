@@ -1,6 +1,10 @@
 <div class="sidenav">
     <mat-toolbar color="primary">
-        <button mat-icon-button (click)="drawer.toggle()">
+        <button
+            data-cy="drawer-btn"
+            mat-icon-button
+            (click)="onButtonClickedHandler()"
+        >
             <span class="material-icons">{{
                 drawer.opened ? 'close' : 'menu'
             }}</span>
@@ -9,9 +13,12 @@
     </mat-toolbar>
 </div>
 
-<mat-drawer-container class="sidebar">
+<mat-drawer-container
+    class="sidebar"
+    [ngClass]="{ 'sidebar--closed': !isDrawerOpen }"
+>
     <mat-drawer #drawer class="sidebar__content" mode="side">
-        <a routerLink="/boards" (click)="drawer.toggle()">
+        <a routerLink="/boards" (click)="onButtonClickedHandler()">
             <button mat-button class="sidebar__button">
                 <mat-icon aria-hidden="false" aria-label="Example home icon"
                     >view_module</mat-icon
@@ -19,7 +26,7 @@
                 Boards
             </button>
         </a>
-        <a routerLink="/groups" (click)="drawer.toggle()">
+        <a routerLink="/groups" (click)="onButtonClickedHandler()">
             <button mat-button class="sidebar__button">
                 <mat-icon aria-hidden="false" aria-label="Example home icon"
                     >group</mat-icon
@@ -27,7 +34,7 @@
                 Groups
             </button>
         </a>
-        <a routerLink="/settings" (click)="drawer.toggle()">
+        <a routerLink="/settings" (click)="onButtonClickedHandler()">
             <button mat-button class="sidebar__button">
                 <mat-icon aria-hidden="false" aria-label="Example home icon"
                     >settings</mat-icon
