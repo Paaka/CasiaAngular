@@ -20,10 +20,14 @@ export class SettingsPageComponent implements OnInit {
     private getLastUsedTheme(): boolean {
         const lastUsedTheme = window.localStorage.getItem('darkTheme')
         if (!lastUsedTheme) {
-            window.localStorage.setItem('darkTheme', 'true')
+            window.localStorage.setItem('darkTheme', 'false')
             return false
         }
 
-        return !!lastUsedTheme
+        return lastUsedTheme === 'false' ? false : true
+    }
+
+    public onSlideChangedHandler($event: any): void {
+        window.localStorage.setItem('darkTheme', String($event?.checked))
     }
 }

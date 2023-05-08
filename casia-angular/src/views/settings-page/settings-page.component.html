@@ -1,3 +1,7 @@
 <div class="settings-page" [formGroup]="settingsFormGroup">
-    <mat-slide-toggle formControlName="darkMode">Dark theme</mat-slide-toggle>
+    <mat-slide-toggle
+        formControlName="darkMode"
+        (change)="onSlideChangedHandler($event)"
+        >Dark theme</mat-slide-toggle
+    >
 </div>
