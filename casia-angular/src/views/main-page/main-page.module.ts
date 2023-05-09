@@ -20,13 +20,6 @@ const routes: Routes = [
                     ),
             },
             {
-                path: 'boards/:id',
-                loadChildren: () =>
-                    import('../board-page/board-page.module').then(
-                        (m) => m.BoardPageModule
-                    ),
-            },
-            {
                 path: 'groups',
                 loadChildren: () =>
                     import('../group-page/group-page.module').then(
