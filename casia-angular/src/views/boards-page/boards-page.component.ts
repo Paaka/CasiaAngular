@@ -8,5 +8,7 @@ import { Component, OnInit } from '@angular/core'
 export class BoardsPageComponent implements OnInit {
     constructor() {}
 
+    longText = 'XD'
+
     ngOnInit(): void {}
 }

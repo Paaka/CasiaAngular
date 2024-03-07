@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { ListModule } from 'src/components/list/list.module'
 import { BoardsPageComponent } from './boards-page.component'
+import { MatCardModule } from '@angular/material/card'
 
 const routes: Routes = [
     {
@@ -20,7 +21,7 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [BoardsPageComponent],
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [CommonModule, RouterModule.forChild(routes), MatCardModule],
     exports: [BoardsPageComponent],
 })
 export class BoardsPageModule {}

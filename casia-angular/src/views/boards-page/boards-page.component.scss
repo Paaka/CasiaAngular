@@ -4,9 +4,11 @@ $width:calc(100vw - sizes.$medium);
 $height:calc(100vw - sizes.$medium);
 
 .wrapper{
-    display: flex;
+    display: grid;
     width: calc(100vw - 32px);
-    height:50vw;
+    height:100vh;
     margin:sizes.$medium;
     overflow-x: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
